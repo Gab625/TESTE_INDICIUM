@@ -9,5 +9,5 @@ df_final = pd.concat([df_explode_historic.drop('historic_data', axis=1), df_hist
 
 df_final['start_date'] = pd.to_datetime(df_final['start_date'], dayfirst=True)
 
-df_final.to_csv('custo_importacao.csv', index=False, sep=";", encoding='utf-8-sig')
+df_final.to_csv('custo_importacao_tratados.csv', index=False, sep=";", encoding='utf-8-sig')
 df_final.info()
