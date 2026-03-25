@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import os
 
 df = pd.read_csv("datasets/produtos_raw.csv")
 
@@ -32,4 +33,11 @@ df.drop_duplicates(inplace=True)
 print(df.shape)
 print(df.info())
 
-df_final = df.to_csv('produtos_raw_tratados.csv',index=False)
+pasta_destino = 'CSVs tratados'
+arquivo = 'produtos_tratados.csv'
+caminho_completo = os.path.join(pasta_destino, arquivo)
+
+if not os.path.exists(pasta_destino):
+    os.makedirs(pasta_destino)
+
+df_final = df.to_csv(caminho_completo,sep=';', index=False)
