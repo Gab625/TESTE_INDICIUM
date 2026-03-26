@@ -10,7 +10,7 @@ df['sale_date'] = df['sale_date'].str.strip()
 
 df['sale_date'] = pd.to_datetime(df['sale_date'], format='mixed')
 
-pasta_destino = "CSVs tratados"
+pasta_destino = "CSVs_tratados"
 arquivo = 'vendas_2023_2024_tratados.csv'
 caminho_completo = os.path.join(pasta_destino,arquivo)
 

@@ -33,7 +33,9 @@ df.drop_duplicates(inplace=True)
 print(df.shape)
 print(df.info())
 
-pasta_destino = 'CSVs tratados'
+df.rename(columns={'code':'id_product','name':'product_name'}, inplace=True)
+
+pasta_destino = 'CSVs_tratados'
 arquivo = 'produtos_tratados.csv'
 caminho_completo = os.path.join(pasta_destino, arquivo)
 

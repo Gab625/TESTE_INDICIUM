@@ -1,4 +1,4 @@
-name;price;code;actual_category
+product_name;price;id_product;actual_category
 Transponder AIS Maré Magnum;33122.52;1;eletrônicos
 Transponder Furuno Marlin;13998.15;2;eletrônicos
 Radar Furuno Pulse Leviathan;9024.19;3;eletrônicos
